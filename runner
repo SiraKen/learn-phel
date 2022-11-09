@@ -1,0 +1,17 @@
+#!/bin/bash
+
+case $1 in
+  "server")
+    php -S localhost:8000 ./src/index.php
+    ;;
+  "repl")
+    ./vendor/bin/phel repl
+    ;;
+  "run")
+    ./vendor/bin/phel run "src/$2"
+    ;;
+  "test")
+    ./vendor/bin/phel test
+    ;;
+esac
+

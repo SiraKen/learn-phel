@@ -1,0 +1,2 @@
+(ns hello-world\example\hello)
+(println "Hello, World!")

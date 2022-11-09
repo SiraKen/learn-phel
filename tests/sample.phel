@@ -1,0 +1,5 @@
+(ns hello-world\tests
+  (:require phel\test :refer [deftest is]))
+
+(deftest my-test
+  (is (= 4 (+ 2 2))))

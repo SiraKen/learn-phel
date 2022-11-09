@@ -1,0 +1,29 @@
+(ns hello-world\boot
+  (:require phel\html :refer [html]))
+
+# echo
+(defn echo [str]
+  (println str))
+
+# fizzbuzz (original: example\fizzbuzz)
+(defn fizzbuzz [n]
+  (cond
+    (= (% n 15) 0) [:p {:style {:color "red" :font-weight "bold"}} "FizzBuzz"]
+    (= (% n  5) 0) [:p {:style {:color "blue"}} "Buzz"]
+    (= (% n  3) 0) [:p {:style {:color "blue"}} "Fizz"]
+    :else [:p n]))
+
+# view
+(echo
+  (html
+    [:html {:style {:font-family "sans-serif"}}
+      [:head
+        [:title "Hello Page"]]
+      [:body {:style {:background "gray"}}
+        [:div {:style {:background "white" :padding "3rem"}}
+          [:h1 {:style {:margin 0}} "Hello World"]
+          [:p {:style {}} "This is an example"]
+          [:div {:style {:background "#f8f9fa" :padding "1rem" :border "solid 1px #ccc"}}
+          (for [n :range [1 100]]
+            (fizzbuzz n))]
+        ]]]))

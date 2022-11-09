@@ -1,0 +1,7 @@
+{
+    "name": "siraken/learn-phel",
+    "type": "project",
+    "require": {
+        "phel-lang/phel-lang": "^0.7.0"
+    }
+}

@@ -1,0 +1,22 @@
+(ns hello-world\example\simple-calc)
+
+# add
+(defn add [x y]
+  (+ x y))
+
+# sub
+(defn sub [x y]
+  (- x y))
+
+# mul
+(defn mul [x y]
+  (* x y))
+
+# div
+(defn div [x y]
+  (/ x y))
+
+(println (add 1 2)) # 3
+(println (sub 1 2)) # -1
+(println (mul 1 2)) # 2
+(println (div 1 2)) # 0.5
